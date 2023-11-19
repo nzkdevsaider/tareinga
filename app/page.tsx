@@ -1,4 +1,6 @@
+import AddTask from "@/components/Buttons/AddTask";
 import TaskCard from "@/components/Tasks/TaskCard";
+import TaskList from "@/components/Tasks/TaskList";
 
 const task = {
   id: "123",
@@ -11,7 +13,8 @@ const task = {
 export default function Home() {
   return (
     <div className="w-full md:max-w-md">
-      <TaskCard task={task} />
+      <AddTask />
+      <TaskList />
     </div>
   );
 }

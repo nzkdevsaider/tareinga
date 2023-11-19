@@ -5,12 +5,10 @@ export type TProps = {
 };
 
 export interface ITask {
-  task: {
-    id: string;
-    title: string;
-    description: string;
-    created_at: string;
-    updated_at: string;
-    state: number;
-  };
+  id: string;
+  title: string;
+  description: string;
+  created_at: string;
+  updated_at: string;
+  state: number;
 }
