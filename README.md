@@ -14,3 +14,6 @@ Tareinga es una webapp sencilla y liviana para organizar tus tareas y todo lo qu
 ## Tecnologías
 
 - Tailwind, NextJS, Dexie.js.
+
+## Diseño
+- [Ver Figma](https://www.figma.com/file/7GXoEMip1hsIOoMEqIk3jg/Tareinga?type=design&node-id=0%3A1&mode=design&t=6l0CcrvItd2XrW5k-1)
