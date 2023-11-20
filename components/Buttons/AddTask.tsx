@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ITask } from "@/types";
-import { v4 as uuidv4 } from "uuid";
+import { randomId } from "@/lib/utils";
 import { db } from "@/db/db";
 
 const AddTask = () => {
@@ -38,7 +38,7 @@ const AddTask = () => {
   const addTask = async () => {
     if (!title || !description) return alert("Debes llenar todos los campos.");
     const task: ITask = {
-      id: uuidv4(),
+      id: randomId(),
       title,
       description,
       created_at: new Date().toISOString(),
