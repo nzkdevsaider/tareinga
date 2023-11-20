@@ -5,8 +5,17 @@ import {
   IconNotebook,
   IconTrash,
 } from "@tabler/icons-react";
+import { db } from "@/db/db";
 
 const TaskCard = ({ ...task }: ITask) => {
+  const handleUpdate = async () => {
+    await db.tasks.update(task.id, { state: 2 });
+  };
+
+  const handleDelete = async () => {
+    await db.tasks.delete(task.id);
+  };
+
   if (task.state === 2) {
     return (
       <div className="flex flex-row justify-between items-center gap-10 p-3 border-secondary border-opacity-40 shadow-md border-2 rounded-md">
@@ -21,7 +30,7 @@ const TaskCard = ({ ...task }: ITask) => {
             <p className="text-sm">{task.description}</p>
           </div>
         </div>
-        <button className="btn btn-circle">
+        <button onClick={handleDelete} className="btn btn-circle">
           <IconTrash className="w-6 h-6" />
         </button>
       </div>
@@ -40,7 +49,7 @@ const TaskCard = ({ ...task }: ITask) => {
             <p className="text-sm">{task.description}</p>
           </div>
         </div>
-        <button className="btn btn-circle">
+        <button onClick={handleUpdate} className="btn btn-circle">
           <IconCheckbox className="w-6 h-6" />
         </button>
       </div>
