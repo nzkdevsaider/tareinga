@@ -1,5 +1,7 @@
 # Tareinga
 
+![](./public/showcase/showcase1.png)
+
 Tareinga es una webapp sencilla y liviana para organizar tus tareas y todo lo que debes hacer en un sólo lugar.
 
 **Actualmente se encuentra en desarrollo.**
